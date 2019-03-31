@@ -1,0 +1,49 @@
+/**
+* 处理一些复用的CSS，可以通过向Mixin传递参数来让代码更加灵活，此特性在处理浏览器前缀的时候非常有用
+ */
+
+/* 处理移动端border 1px问题 */
+
+@mixin border($direction: '', $color: '#000') {
+  @if ($direction == '') {
+    border: 1px solid $color;
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      border: 1px solid $color;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      border: 1px solid $color;
+      -webkit-transform: scaleY(0.33);
+      transform: scaleY(0.33);
+    }
+  } @else {
+    #{border-#{$direction}}: 1px solid $color;
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      #{border-#{$direction}}: 1px solid $color;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      #{border-#{$direction}}: 1px solid $color;
+      -webkit-transform: scaleY(0.33);
+      transform: scaleY(0.33);
+    }
+  }
+}
+
+/**
+* 2x 3x图片的引入
+* 示例: bg('../bg.img')
+*/
+
+@mixin bg-image($url) {
+  background-image: url($url+'@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3) {
+    background-image: url($url+'@3x.png');
+  }
+}

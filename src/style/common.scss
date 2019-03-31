@@ -1,0 +1,19 @@
+/**
+* 处理一些全局样式
+*/
+@import '@/style/mixins.scss';
+
+/* 处理移动端1px问题 */
+.border-one {
+  @include border();
+}
+
+/* 清楚浮动 */
+.cleanfix {
+  *zoom: 1;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

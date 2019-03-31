@@ -1,0 +1,25 @@
+/**
+* 定义应用常用的变量，颜色，字体等
+* 直接在需要的scss文件引入后使用定义的变量 
+*******************
+* 示例 color: $red-color
+*/
+
+/**
+* UI 前缀
+*/
+$ui-perfix: 'h';
+
+/** 
+* 颜色定义
+*/
+
+$color-main: red;
+$color-white: #fff;
+$color-font: #2c2c2c; // 文字主要颜色
+
+/**
+* 字体定义: font
+*/
+
+$font-main: 12px; // 字体主要大小
