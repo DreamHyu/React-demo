@@ -75,7 +75,11 @@ module.exports = function(webpackEnv) {
       },
       {
         loader: require.resolve('css-loader'),
-        options: cssOptions
+        options: {
+          cssOptions,
+          importLoaders: 1,
+          modules: false
+        }
       },
       {
         // Options for PostCSS as we reference these options twice

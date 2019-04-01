@@ -1,7 +1,11 @@
 @import '@/style/common.scss';
+@import '@/style/reset.scss';
 
 .App {
+  min-height: 100vh;
   text-align: center;
+  background-image: url('./assets/bg.png');
+  background-size: 100% 100%;
 }
 
 .App-logo {
@@ -11,8 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

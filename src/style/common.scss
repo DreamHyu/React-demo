@@ -11,9 +11,33 @@
 /* 清楚浮动 */
 .cleanfix {
   *zoom: 1;
+
   &::after {
     content: '';
     display: table;
     clear: both;
   }
+}
+
+/* 登录模块 */
+.login-module {
+  width: 630px;
+  height: 530px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -315px;
+  opacity: 1;
+}
+
+/* 竖屏时的样式处理 */
+.vertical-screen {
+  @extend .login-module;
+  bottom: 20px;
+}
+
+/* 横屏时的样式处理 */
+.horizontal-screen {
+  @extend .login-module;
+  top: 60px;
 }
