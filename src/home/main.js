@@ -7,6 +7,12 @@ class Main extends Component {
   render() {
     return (
       <div>
+        <Switch>
+          <Route path='/' exact render={()=> (
+                <Redirect to="/login"/>
+            )}/>
+          <Route path={'/login'} component={Login}/>
+        </Switch>
         <Login/>
       </div>
     )

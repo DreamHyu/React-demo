@@ -1,12 +1,5 @@
 @import '@/style/common.scss';
-
-.vertical-screen {
-    @extend .vertical-screen;
-}
-
-.horizontal-screen {
-    @extend .horizontal-screen;
-}
+@import '@/style/variable.scss';
 
 .test {
     color: red;

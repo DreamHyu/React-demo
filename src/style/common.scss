@@ -2,6 +2,7 @@
 * 处理一些全局样式
 */
 @import '@/style/mixins.scss';
+@import '@/style/variable.scss';
 
 /* 处理移动端1px问题 */
 .border-one {
@@ -21,23 +22,21 @@
 
 /* 登录模块 */
 .login-module {
-  width: 630px;
-  height: 530px;
+  width: 6.1rem;
+  height: 5.1rem;
   margin: 0 auto;
   position: absolute;
   left: 50%;
-  margin-left: -315px;
+  margin-left: -3.15rem;
   opacity: 1;
-}
-
-/* 竖屏时的样式处理 */
-.vertical-screen {
-  @extend .login-module;
-  bottom: 20px;
-}
-
-/* 横屏时的样式处理 */
-.horizontal-screen {
-  @extend .login-module;
-  top: 60px;
+  border: solid 4px $border-color;
+  border-radius: 0.2rem;
+  /* 竖屏 */
+  @media screen and (orientation:portrait) {
+    bottom: 0.2rem;
+  }
+  /* 横屏 */
+  @media screen and (orientation:landscape) {
+    top: 0.6rem;
+  }
 }

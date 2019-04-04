@@ -78,7 +78,7 @@ module.exports = function(webpackEnv) {
         options: {
           cssOptions,
           importLoaders: 1,
-          modules: false
+          modules: true
         }
       },
       {
